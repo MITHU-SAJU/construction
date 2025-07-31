@@ -1,0 +1,433 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Site List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/styles.css" />
+        <style>
+            .detail-content {
+                overflow: hidden;
+                height: 0;
+                transition: height 0.4s ease;
+            }
+
+            .table .main-row>td {
+                vertical-align: middle;
+            }
+
+            .btn-toggle {
+                font-size: 0.85rem;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+
+        <!-- Sidebar -->
+        <!-- Sidebar Toggle Button -->
+        <input type="checkbox" id="checkbox" hidden class="form-control custom-input">
+        <label for="checkbox" class="toggle-btn" id="toggleBtn">
+            <div class="bars" id="bar1"></div>
+            <div class="bars" id="bar2"></div>
+            <div class="bars" id="bar3"></div>
+        </label>
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <!-- Optional logo here -->
+            </div>
+            <ul>
+                <li>
+                    <a href="../index.html"><i class="fas fa-home"></i><span>Dashboard</span></a>
+                </li>
+                <li>
+                    <a href="../site/site-list.html"><i class="fas fa-building"></i><span>Sites</span></a>
+                </li>
+                <li>
+                    <a href="pending-approval.html"><i class="fas fa-check-circle"></i><span>Pending
+                            Approvals</span></a>
+                </li>
+                <li>
+                    <a href="../payments/payments.html"><i class="fas fa-credit-card"></i><span>Payments</span></a>
+                </li>
+                <li class="has-submenu">
+                    <a href="#" class="submenu-toggle">
+                        <i class="fas fa-chart-line"></i><span>Reports</span>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="../reports/site-reports.html"><i class="fas fa-map-marker-alt"></i><span>
+                                    Sites</span></a>
+                        </li>
+                        <li>
+                            <a href="../reports/payment-reports.html"><i class="fas fa-file-invoice-dollar"></i><span>
+                                    Payments</span></a>
+                        </li>
+                        <li>
+                            <a href="../reports/supplies-reports.html"><i class="fas fa-truck-loading"></i><span>
+                                    Supplies/Contracts</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#" class="submenu-toggle">
+                        <i class="fas fa-cog"></i><span>Settings</span>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="../settings/site-location.html"><i class="fas fa-map-marker-alt"></i><span> Site
+                                    Location</span></a>
+                        </li>
+                        <li>
+                            <a href="../settings/materials/material-list.html"><i class="fas fa-cubes"></i><span>
+                                    Material</span></a>
+                        </li>
+                        <li>
+                            <a href="../settings/supplier/supplier-list.html"><i class="fas fa-truck"></i><span>
+                                    Supplier</span></a>
+                        </li>
+                        <li>
+                            <a href="../settings/supplier-material/supplier-material.html"><i
+                                    class="fas fa-boxes"></i><span>
+                                    Supplier Materials</span></a>
+                        </li>
+                        <li>
+                            <a href="../settings/contactor-category/contractor-category.html"><i
+                                    class="fas fa-layer-group"></i><span> Contractor Category</span></a>
+                        </li>
+                        <li>
+                            <a href="../settings/contactor/contractor-list.html"><i class="fas fa-user-cog"></i><span>
+                                    Contractor</span></a>
+                        </li>
+                        <li>
+                            <a href="../settings/expense-type/expense-type.html"><i class="fas fa-wallet"></i><span>
+                                    Expense
+                                    Type</span></a>
+                        </li>
+                        <li>
+                            <a href="../settings/prefix/prefix.html"><i class="fas fa-keyboard"></i><span>
+                                    Prefix</span></a>
+                        </li>
+                        <li>
+                            <a href="../settings/uom/uom.html"><i class="fas fa-balance-scale"></i><span> UOM</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../users/user-list.html"><i class="fas fa-users"></i><span>Users</span></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="main-content" id="mainContent">
+            <!-- Header -->
+            <div id="mainHeader"
+                class="d-flex justify-content-between align-items-center px-4 py-2 bg-white text-dark shadow-sm w-100">
+                <h4 class="fw-bold mb-0">Pending Approvals</h4>
+                <div class="d-flex align-items-center gap-3">
+                </div>
+            </div>
+
+
+            <div class="container-fluid my-5">
+                <div class="custom-box p-4">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover table-striped text-center align-middle">
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Date</th>
+                                    <th>Site</th>
+                                    <th>Supplier</th>
+                                    <th>Amount</th>
+                                    <th>More</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>12-10-2024</td>
+                                    <td>URBAN SITE</td>
+                                    <td>RMC EXPRESS</td>
+                                    <td>₹10,200</td>
+                                    <td class="text-center">
+                                        <button
+                                            class="btn btn-sm btn-outline-primary rounded-circle shadow-sm btn-toggle"
+                                            title="Expand">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm me-1" title="Approve">
+                                            <i class="fas fa-check-circle">
+                                                approve
+                                            </i>
+                                        </button>
+                                        <a href="#" class="btn btn-sm btn-warning me-1" title="View"
+                                            data-bs-toggle="modal" data-bs-target="#supplyModal">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <button class="btn btn-sm btn-info" title="edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-danger" title="Delete">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="detail-row">
+                                    <td colspan="6" class="p-0">
+                                        <div class="detail-content">
+                                            <div class="p-3">
+                                                <table class="table mt-2 table-sm table-bordered ">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>User</th>
+                                                            <th>Qty</th>
+                                                            <th>Material</th>
+                                                            <th>UOM</th>
+                                                            <th>Rate</th>
+                                                            <th>Remarks</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>mithun</td>
+                                                            <td>12</td>
+                                                            <td>cement</td>
+                                                            <td>kgs</td>
+                                                            <td>12200</td>
+                                                            <td>shankar cement</td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td>2</td>
+                                    <td>12-10-2024</td>
+                                    <td>URBAN SITE</td>
+                                    <td>RMC EXPRESS</td>
+                                    <td>₹10,200</td>
+                                    <td class="text-center">
+                                        <button
+                                            class="btn btn-sm btn-outline-primary rounded-circle shadow-sm btn-toggle"
+                                            title="Expand">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm me-1" title="Approve">
+                                            <i class="fas fa-check-circle">
+                                                approve
+                                            </i>
+                                        </button>
+                                        <a href="#" class="btn btn-sm btn-warning me-1" title="View"
+                                            data-bs-toggle="modal" data-bs-target="#supplyModal">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <button class="btn btn-sm btn-info" title="edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-danger" title="Delete">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="detail-row">
+                                    <td colspan="6" class="p-0">
+                                        <div class="detail-content">
+                                            <div class="p-3">
+                                                <table class="table mt-2 table-sm table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>User</th>
+                                                            <th>Qty</th>
+                                                            <th>Material</th>
+                                                            <th>UOM</th>
+                                                            <th>Rate</th>
+                                                            <th>Remarks</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>mithun</td>
+                                                            <td>12</td>
+                                                            <td>cement</td>
+                                                            <td>kgs</td>
+                                                            <td>12200</td>
+                                                            <td>shankar cement</td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="supplyModal" tabindex="-1" aria-labelledby="supplyModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content shadow-lg rounded-4 border-0">
+                        <!-- Modal Header -->
+                        <div class="modal-header bg-head text-white py-3 px-4">
+                            <h5 class="modal-title fw-bold" id="supplyModalLabel">
+                                <i class="fas fa-box me-2"></i> Supply Details
+                            </h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body p-4">
+                            <!-- Supply Info -->
+                            <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+                                <!-- Left Block -->
+                                <div class="col">
+                                    <div class="p-3 bg-light h-100">
+                                        <div class="row mb-2">
+                                            <div class="col-5 fw-semibold text-dark">SITE NAME:</div>
+                                            <div class="col-7 text-muted">PREMIUM PRECAST - TIRUPPUR</div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-5 fw-semibold text-dark">SUPPLIER NAME:</div>
+                                            <div class="col-7 text-muted">A ONE READYMIX</div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-5 fw-semibold text-dark">DATE:</div>
+                                            <div class="col-7 text-muted">10-10-2024</div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-5 fw-semibold text-dark">UOM:</div>
+                                            <div class="col-7 text-muted">UNITS</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-5 fw-semibold text-dark">STATUS:</div>
+                                            <div class="col-7">
+                                                <span class="badge bg-success px-3 py-2">
+                                                    <i class="fas fa-check-circle me-1"></i> APPROVED
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Right Block -->
+                                <div class="col">
+                                    <div class="p-3 bg-light h-100">
+                                        <div class="row mb-2">
+                                            <div class="col-5 fw-semibold text-dark">USER:</div>
+                                            <div class="col-7 text-muted">simon</div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-5 fw-semibold text-dark">MATERIAL:</div>
+                                            <div class="col-7 text-muted">RMC</div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-5 fw-semibold text-dark">QTY:</div>
+                                            <div class="col-7 text-muted">2</div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-5 fw-semibold text-dark">RATE:</div>
+                                            <div class="col-7 text-muted">₹4750</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-5 fw-semibold text-dark">AMOUNT:</div>
+                                            <div class="col-7 text-muted">₹9500</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <hr class="mb-4">
+
+                            <!-- Bill Images -->
+                            <h5 class="fw-bold text-primary mb-3"><i class="fas fa-file-invoice me-2"></i>Bill Images
+                            </h5>
+                            <div class="row g-3">
+                                <div class="col-md-4 col-sm-6">
+                                    <img src="path-to-bill1.jpg" class="img-fluid rounded border shadow-sm"
+                                        alt="Bill 1">
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <img src="path-to-bill2.jpg" class="img-fluid rounded border shadow-sm"
+                                        alt="Bill 2">
+                                </div>
+                                <!-- Add more <div class="col-md-4">...</div> if needed -->
+                            </div>
+                        </div>
+
+                        <!-- Modal Footer -->
+                        <div class="modal-footer bg-light border-top py-3">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                <i class="fas fa-times me-1"></i> Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <script src="../assets/script.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <script>
+                document.querySelectorAll('.btn-toggle').forEach((btn, index) => {
+                    const detailContent = document.querySelectorAll('.detail-content')[index];
+
+                    btn.addEventListener('click', () => {
+                        const isExpanded = detailContent.style.height && detailContent.style.height !==
+                            "0px";
+
+                        if (isExpanded) {
+                            // Collapse
+                            detailContent.style.height = detailContent.scrollHeight +
+                                "px"; // Set current height for smooth transition
+                            requestAnimationFrame(() => {
+                                detailContent.style.height = "0px";
+                            });
+                        } else {
+                            // Expand
+                            detailContent.style.height = detailContent.scrollHeight + "px";
+                            detailContent.addEventListener("transitionend", function expandEnd() {
+                                detailContent.style.height =
+                                    "auto"; // allow dynamic height after animation
+                                detailContent.removeEventListener("transitionend", expandEnd);
+                            });
+                        }
+                    });
+                });
+            </script>
+
+    </body>
+
+    </html>
