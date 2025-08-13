@@ -125,39 +125,43 @@
         <div class="container-fluid my-5">
             <div class="custom-box p-4">
                 <div class="section-style">
-                    <div class="row g-4 justify-content-center align-items-end">
-                        <!-- Supplier Dropdown -->
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <label for="supplierName" class="form-label">Supplier Name</label>
-                                <select id="supplierName" class="form-select custom-input" aria-label="Select Supplier">
-                                    <option selected disabled>Select Supplier</option>
-                                    <option value="abc-traders">ABC Traders</option>
-                                    <option value="xyz-supplies">XYZ Supplies</option>
-                                    <option value="buildtech-co">BuildTech Co.</option>
-                                    <option value="greenstone">GreenStone Pvt Ltd</option>
-                                </select>
+                    <form id="materialForm">
+                        <div class="row g-4 justify-content-center align-items-end">
+                            <!-- Supplier Dropdown -->
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="supplierName" class="form-label">Supplier Name</label>
+                                    <select id="supplierName" class="form-select custom-input"
+                                        aria-label="Select Supplier" required>
+                                        <option selected disabled value="">Select Supplier</option>
+                                        <option value="abc-traders">ABC Traders</option>
+                                        <option value="xyz-supplies">XYZ Supplies</option>
+                                        <option value="buildtech-co">BuildTech Co.</option>
+                                        <option value="greenstone">GreenStone Pvt Ltd</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Material Dropdown -->
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="materialName" class="form-label">Material Name</label>
+                                    <select id="materialName" class="form-select custom-input"
+                                        aria-label="Select Material" required>
+                                        <option selected disabled value="">Select Material</option>
+                                        <option value="steel-rods">Steel Rods</option>
+                                        <option value="bricks">Bricks</option>
+                                        <option value="concrete">Ready Mix Concrete</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="col-md-2 d-grid align-self-end mb-3">
+                                <button type="submit" class="btn btn-glow">Submit</button>
                             </div>
                         </div>
-
-                        <!-- Material Dropdown -->
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <label for="materialName" class="form-label">Material Name</label>
-                                <select id="materialName" class="form-select custom-input" aria-label="Select Material">
-                                    <option selected disabled>Select Material</option>
-                                    <option value="steel-rods">Steel Rods</option>
-                                    <option value="bricks">Bricks</option>
-                                    <option value="concrete">Ready Mix Concrete</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <div class="col-md-2 d-grid align-self-end mb-3">
-                            <button type="button" class="btn btn-glow">Submit</button>
-                        </div>
-                    </div>
+                    </form>
 
                 </div>
 

@@ -127,59 +127,69 @@
             <div class="custom-box p-4">
                 <!-- Supplier Info Section -->
                 <div class="section-style mb-4">
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <label class="form-label">Supplier Name</label>
-                            <input type="text" class="form-control custom-input" placeholder="Enter supplier name" />
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label">Contact Person</label>
-                            <input type="text" class="form-control custom-input" placeholder="Enter contact person" />
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label">Contact No</label>
-                            <input type="tel" class="form-control custom-input" placeholder="Enter contact number" />
-                        </div>
+                    <form id="supplierForm">
 
-                        <div class="col-md-4">
-                            <label class="form-label">Address Line 1</label>
-                            <input type="text" class="form-control custom-input" placeholder="Address line 1" />
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label">Address Line 2</label>
-                            <input type="text" class="form-control custom-input"
-                                placeholder="Address line 2 (optional)" />
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label">City</label>
-                            <input type="text" class="form-control custom-input" placeholder="Enter city" />
-                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Supplier Name</label>
+                                <input type="text" class="form-control custom-input" placeholder="Enter supplier name"
+                                    required />
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Contact Person</label>
+                                <input type="text" class="form-control custom-input" placeholder="Enter contact person"
+                                    required />
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Contact No</label>
+                                <input type="tel" class="form-control custom-input" placeholder="Enter contact number"
+                                    required />
+                            </div>
 
-                        <div class="col-md-4">
-                            <label class="form-label">State</label>
-                            <select class="form-select custom-input">
-                                <option selected disabled>Select State</option>
-                                <option value="Tamil Nadu">Tamil Nadu</option>
-                                <option value="Kerala">Kerala</option>
-                                <option value="Karnataka">Karnataka</option>
-                                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                                <option value="Telangana">Telangana</option>
-                            </select>
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label">Pincode</label>
-                            <input type="text" class="form-control custom-input" placeholder="Enter pincode" />
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label">Email Address</label>
-                            <input type="email" class="form-control custom-input" placeholder="Enter email address" />
-                        </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Address Line 1</label>
+                                <input type="text" class="form-control custom-input" placeholder="Address line 1"
+                                    required />
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Address Line 2</label>
+                                <input type="text" class="form-control custom-input"
+                                    placeholder="Address line 2 (optional)" />
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-control custom-input" placeholder="Enter city"
+                                    required />
+                            </div>
 
-                        <div class="col-md-4">
-                            <label class="form-label">GST Number</label>
-                            <input type="text" class="form-control custom-input" placeholder="Enter GST number" />
+                            <div class="col-md-4">
+                                <label class="form-label">State</label>
+                                <select class="form-select custom-input" required>
+                                    <option selected disabled value="">Select State</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Telangana">Telangana</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Pincode</label>
+                                <input type="text" class="form-control custom-input" placeholder="Enter pincode"
+                                    required />
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control custom-input" placeholder="Enter email address"
+                                    required />
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">GST Number</label>
+                                <input type="text" class="form-control custom-input" placeholder="Enter GST number"
+                                    required />
+                            </div>
                         </div>
-                    </div>
                 </div>
 
                 <!-- Bank Info Section -->
@@ -188,33 +198,34 @@
                     <div class="row g-3 mt-2">
                         <div class="col-md-4">
                             <label class="form-label">Account Name</label>
-                            <input type="text" class="form-control custom-input" placeholder="Enter account name" />
+                            <input type="text" class="form-control custom-input" placeholder="Enter account name"
+                                required />
                         </div>
                         <div class="col-md-4">
                             <label class="form-label">Account Number</label>
-                            <input type="text" class="form-control custom-input" placeholder="Enter account number" />
+                            <input type="text" class="form-control custom-input" placeholder="Enter account number"
+                                required />
                         </div>
                         <div class="col-md-4">
                             <label class="form-label">IFSC Code</label>
-                            <input type="text" class="form-control custom-input" placeholder="Enter IFSC code" />
+                            <input type="text" class="form-control custom-input" placeholder="Enter IFSC code"
+                                required />
                         </div>
                         <div class="col-md-4">
                             <label class="form-label">Bank Name</label>
-                            <input type="text" class="form-control custom-input" placeholder="Enter bank name" />
+                            <input type="text" class="form-control custom-input" placeholder="Enter bank name"
+                                required />
                         </div>
                     </div>
                 </div>
 
                 <!-- Submit Button -->
                 <div class="text-center mt-4">
-                    <button class="btn btn-glow px-5 fw-bold">Submit</button>
+                    <button type="submit" class="btn btn-glow px-5 fw-bold">Submit</button>
                 </div>
+                </form>
             </div>
         </div>
-
-
-    </div>
-    </div>
 
     </div>
     <script src="../../assets/script.js"></script>

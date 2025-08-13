@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>add supplier</title>
+    <title>add user</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CDN -->
@@ -123,45 +123,55 @@
         <div class="container-fluid my-5">
             <div class="custom-box p-4">
                 <div class="section-style mb-4">
-                    <form id="siteForm">
+                    <form id="userForm">
                         <div class="row g-4">
                             <div class="col">
                                 <div class="form-floating">
                                     <div class="row g-3">
+                                        <!-- Name -->
                                         <div class="col-md-4">
                                             <label class="form-label mb-2">Name</label>
                                             <input type="text" class="form-control custom-input" name="name"
-                                                placeholder="Enter full name" />
+                                                placeholder="Enter full name" required />
                                         </div>
+
+                                        <!-- Email -->
                                         <div class="col-md-4">
                                             <label class="form-label mb-2">Email</label>
                                             <input type="email" class="form-control custom-input" name="email"
-                                                placeholder="Enter email address" />
+                                                placeholder="Enter email address" required />
                                         </div>
+
+                                        <!-- Phone -->
                                         <div class="col-md-4">
                                             <label class="form-label mb-2">Phone</label>
                                             <input type="tel" class="form-control custom-input" name="phone"
-                                                placeholder="Enter phone number" />
+                                                placeholder="Enter phone number" required />
                                         </div>
 
+                                        <!-- Mobile -->
                                         <div class="col-md-4">
                                             <label class="form-label mb-2">Mobile</label>
                                             <input type="tel" class="form-control custom-input" name="mobile"
-                                                placeholder="Enter mobile number" />
+                                                placeholder="Enter mobile number" required />
                                         </div>
+
+                                        <!-- User Type -->
                                         <div class="col-md-4">
                                             <label class="form-label mb-2">User Type</label>
-                                            <select class="form-select custom-input" name="user_type">
-                                                <option value="">-- Select User Type --</option>
+                                            <select class="form-select custom-input" name="user_type" required>
+                                                <option value="" selected disabled>-- Select User Type --</option>
                                                 <option value="admin">Admin</option>
                                                 <option value="staff">Staff</option>
                                                 <option value="supervisor">Supervisor</option>
                                             </select>
                                         </div>
+
+                                        <!-- Site -->
                                         <div class="col-md-4">
                                             <label class="form-label mb-2">Site</label>
-                                            <select class="form-select custom-input" name="site">
-                                                <option value="">-- Select Site --</option>
+                                            <select class="form-select custom-input" name="site" required>
+                                                <option value="" selected disabled>-- Select Site --</option>
                                                 <option value="site1">Site 1</option>
                                                 <option value="site2">Site 2</option>
                                                 <option value="site3">Site 3</option>
@@ -172,34 +182,38 @@
                                     <h5 class="text-dark mb-4 mt-4">Login Credentials</h5>
 
                                     <div class="row g-3">
+                                        <!-- Username -->
                                         <div class="col-md-6">
                                             <label class="form-label mb-2">Username</label>
                                             <input type="text" class="form-control custom-input" name="username"
-                                                placeholder="Enter username" />
+                                                placeholder="Enter username" required />
                                         </div>
+
+                                        <!-- Password -->
                                         <div class="col-md-6">
                                             <label class="form-label mb-2">Password</label>
                                             <input type="password" class="form-control custom-input" name="password"
-                                                placeholder="Enter password" />
+                                                placeholder="Enter password" required />
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Submit Button -->
+                        <div class="row mt-4 justify-content-center">
+                            <div class="col-md-2 d-grid">
+                                <button type="submit" class="btn btn-glow">Submit</button>
+                            </div>
+                        </div>
                     </form>
-                </div>
 
-                <div class="row mt-4 justify-content-center">
-                    <div class="col-md-2 d-grid">
-                        <button type="submit" class="btn btn-glow">Submit</button>
-                    </div>
                 </div>
-
             </div>
-
         </div>
-        <script src="../assets/script.js"></script>
+    </div>
+    <script src="../assets/script.js"></script>
 </body>
 
 </html>

@@ -119,48 +119,51 @@
         <div class="container-fluid my-5">
             <div class="custom-box p-4">
                 <div class="section-style mb-4">
-                    <div id="form">
+                    <form id="materialEntryForm">
                         <div class="row g-3">
                             <div class="col-md-4">
                                 <label class="form-label">Date</label>
-                                <input type="date" class="form-control custom-input" value="<?= date('Y-m-d') ?>">
+                                <input type="date" class="form-control custom-input" value="<?= date('Y-m-d') ?>"
+                                    required>
                             </div>
 
                             <div class="col-md-4">
                                 <label class="form-label">Supplier</label>
-                                <select class="form-control custom-input">
-                                    <option selected disabled>Select Supplier</option>
+                                <select class="form-control custom-input" required>
+                                    <option selected disabled value="">Select Supplier</option>
                                     <option value="add">Add New Supplier</option>
                                 </select>
                             </div>
 
                             <div class="col-md-4">
                                 <label class="form-label">Material</label>
-                                <select class="form-control custom-input">
-                                    <option selected disabled>Select Material</option>
+                                <select class="form-control custom-input" required>
+                                    <option selected disabled value="">Select Material</option>
                                 </select>
                             </div>
 
                             <div class="col-md-4">
                                 <label class="form-label">Qty</label>
-                                <input type="text" class="form-control custom-input" placeholder="Enter Quantity">
+                                <input type="text" class="form-control custom-input" placeholder="Enter Quantity"
+                                    required>
                             </div>
 
                             <div class="col-md-4">
                                 <label class="form-label">UOM</label>
-                                <select class="form-control custom-input">
-                                    <option selected disabled>Select UOM</option>
+                                <select class="form-control custom-input" required>
+                                    <option selected disabled value="">Select UOM</option>
                                 </select>
                             </div>
 
                             <div class="col-md-4">
                                 <label class="form-label">Rate</label>
-                                <input type="text" class="form-control custom-input" placeholder="Enter Rate">
+                                <input type="text" class="form-control custom-input" placeholder="Enter Rate" required>
                             </div>
 
                             <div class="col-md-4">
                                 <label class="form-label">Amount</label>
-                                <input type="text" class="form-control custom-input" placeholder="Auto/Manual Amount">
+                                <input type="text" class="form-control custom-input" placeholder="Auto/Manual Amount"
+                                    required>
                             </div>
 
                             <div class="col-md-4">
@@ -172,46 +175,47 @@
                                 <label class="form-label">Upload Images</label>
                                 <div id="imageFields" class="d-flex flex-column gap-2">
                                     <div class="d-flex">
-                                        <input type="file" name="images[]" class="form-control custom-input" />
+                                        <input type="file" name="images[]" class="form-control custom-input">
                                         <button type="button" class="btn btn-success ms-2"
                                             onclick="addImageField()">+</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
+
                 <!-- Submit Button -->
                 <div class="text-center mt-4">
-                    <button class="btn btn-glow px-5 fw-bold">Submit</button>
+                    <button type="submit" class="btn btn-glow px-5 fw-bold">Submit</button>
                 </div>
+                </form>
+
+
             </div>
-
         </div>
-    </div>
 
 
-    <script>
-        function addImageField() {
-            const container = document.getElementById("imageFields");
+        <script>
+            function addImageField() {
+                const container = document.getElementById("imageFields");
 
-            // Create new image input row
-            const newRow = document.createElement("div");
-            newRow.className = "d-flex mt-1";
+                // Create new image input row
+                const newRow = document.createElement("div");
+                newRow.className = "d-flex mt-1";
 
-            newRow.innerHTML = `
+                newRow.innerHTML = `
       <input type="file" name="images[]" class="form-control custom-input " />
       <button type="button" class="btn btn-danger ms-2" onclick="removeImageField(this)">−</button>
     `;
 
-            container.appendChild(newRow);
-        }
+                container.appendChild(newRow);
+            }
 
-        function removeImageField(button) {
-            button.parentElement.remove();
-        }
-    </script>
-    <script src="../assets/script.js"></script>
+            function removeImageField(button) {
+                button.parentElement.remove();
+            }
+        </script>
+        <script src="../assets/script.js"></script>
 
 
 </body>

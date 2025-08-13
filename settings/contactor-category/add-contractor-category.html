@@ -124,27 +124,30 @@
 
         <div class="container-fluid my-5">
             <div class="custom-box p-4">
+
                 <div class="section-style">
-                    <div class="row g-4 justify-content-center align-items-end">
-                        <!-- Category Name Input -->
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <label for="siteName" class="form-label">Category Name</label>
-                                <input type="text" id="siteName" class="form-control custom-input"
-                                    placeholder="Enter Category Name">
+                    <form id="categoryForm">
+                        <div class="row g-4 justify-content-center align-items-end">
+                            <!-- Category Name Input -->
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="categoryName" class="form-label">Category Name</label>
+                                    <input type="text" id="categoryName" class="form-control custom-input"
+                                        placeholder="Enter Category Name" required>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="col-md-2 d-grid mb-3">
+                                <button type="submit" class="btn btn-glow">Submit</button>
                             </div>
                         </div>
-
-                        <!-- Submit Button -->
-                        <div class="col-md-2 d-grid mb-3">
-                            <button type="button" class="btn btn-glow" onclick="addSite()">Submit</button>
-                        </div>
-                    </div>
                 </div>
-            </div>
+                </form>
 
-        </div>
-        <script src="../../assets/script.js"></script>
+
+            </div>
+            <script src="../../assets/script.js"></script>
 </body>
 
 </html>

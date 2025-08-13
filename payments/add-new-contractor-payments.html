@@ -122,20 +122,20 @@
 
         <div class="container-fluid my-5">
             <div class="custom-box p-4">
-                <div class="section-style mb-4">
-                    <form id="siteForm">
+                <form id="contractorForm">
+                    <div class="section-style mb-4">
                         <div class="row g-3">
                             <!-- CONTRACTOR NAME -->
                             <div class="col-md-4">
                                 <label class="form-label">Contractor Name</label>
-                                <input type="text" class="form-control custom-input"
-                                    placeholder="Enter contractor name" />
+                                <input type="text" class="form-control custom-input" placeholder="Enter contractor name"
+                                    required />
                             </div>
 
                             <!-- CONTACT CATEGORY -->
                             <div class="col-md-4">
                                 <label class="form-label">Contractor Category</label>
-                                <select class="form-select custom-input" name="contact_category">
+                                <select class="form-select custom-input" name="contact_category" required>
                                     <option value="">-- Select Category --</option>
                                     <option value="contractor">Contractor</option>
                                     <option value="supplier">Supplier</option>
@@ -148,15 +148,15 @@
                             <!-- CONTACT NO -->
                             <div class="col-md-4">
                                 <label class="form-label">Contact No</label>
-                                <input type="tel" class="form-control custom-input"
-                                    placeholder="Enter contact number" />
+                                <input type="tel" class="form-control custom-input" placeholder="Enter contact number"
+                                    pattern="\d{10}" maxlength="10" required />
                             </div>
 
                             <!-- ADDRESS 1 -->
                             <div class="col-md-4">
                                 <label class="form-label">Address 1</label>
-                                <input type="text" class="form-control custom-input"
-                                    placeholder="Enter address line 1" />
+                                <input type="text" class="form-control custom-input" placeholder="Enter address line 1"
+                                    required />
                             </div>
 
                             <!-- ADDRESS 2 -->
@@ -169,14 +169,15 @@
                             <!-- CITY -->
                             <div class="col-md-4">
                                 <label class="form-label">City</label>
-                                <input type="text" class="form-control custom-input" placeholder="Enter city" />
+                                <input type="text" class="form-control custom-input" placeholder="Enter city"
+                                    required />
                             </div>
 
                             <!-- STATE -->
                             <div class="col-md-4">
                                 <label class="form-label">State</label>
-                                <select class="form-select custom-input">
-                                    <option selected disabled>Select state</option>
+                                <select class="form-select custom-input" required>
+                                    <option selected disabled value="">Select state</option>
                                     <option>Tamil Nadu</option>
                                     <option>Kerala</option>
                                     <option>Karnataka</option>
@@ -187,30 +188,33 @@
                             <div class="col-md-4">
                                 <label class="form-label">Pincode</label>
                                 <input type="text" class="form-control custom-input" placeholder="Enter pincode"
-                                    maxlength="6" pattern="\d{6}" />
+                                    maxlength="6" pattern="\d{6}" required />
                             </div>
 
                             <!-- EMAIL -->
                             <div class="col-md-4">
                                 <label class="form-label">Email Address</label>
-                                <input type="email" class="form-control custom-input"
-                                    placeholder="Enter email address" />
+                                <input type="email" class="form-control custom-input" placeholder="Enter email address"
+                                    required />
                             </div>
 
                             <!-- GST -->
                             <div class="col-md-4">
                                 <label class="form-label">GST Number</label>
-                                <input type="text" class="form-control custom-input" placeholder="Enter GST number" />
+                                <input type="text" class="form-control custom-input" placeholder="Enter GST number"
+                                    required />
                             </div>
                         </div>
-
-                    </form>
-                </div>
-                <div class="row mt-4 justify-content-center">
-                    <div class="col-md-2 d-grid">
-                        <button type="submit" class="btn btn-glow">Submit</button>
                     </div>
-                </div>
+
+                    <!-- Submit Button -->
+                    <div class="row mt-4 justify-content-center">
+                        <div class="col-md-2 d-grid">
+                            <button type="submit" class="btn btn-glow">Submit</button>
+                        </div>
+                    </div>
+                </form>
+
 
             </div>
         </div>

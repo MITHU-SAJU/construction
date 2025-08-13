@@ -120,26 +120,28 @@
         <div class="container-fluid my-5">
             <div class="custom-box p-4">
                 <div class="section-style mb-4">
-                    <div id="paymentFormContainer">
+                    <form id="paymentForm">
                         <!-- Payment Form -->
-                        <div class="payment-form ">
+                        <div class="payment-form">
                             <div class="row g-3">
                                 <!-- Date -->
                                 <div class="col-md-3">
                                     <label class="form-label">Date</label>
-                                    <input type="date" class="form-control custom-input" value="<?= date('Y-m-d') ?>">
+                                    <input type="date" class="form-control custom-input" value="<?= date('Y-m-d') ?>"
+                                        required>
                                 </div>
 
                                 <!-- Amount -->
                                 <div class="col-md-3">
                                     <label class="form-label">Amount</label>
-                                    <input type="number" class="form-control custom-input" placeholder="Enter amount">
+                                    <input type="number" class="form-control custom-input" placeholder="Enter amount"
+                                        required>
                                 </div>
 
                                 <!-- Payment Type -->
                                 <div class="col-md-3">
                                     <label class="form-label">Payment Type</label>
-                                    <select class="form-control custom-input">
+                                    <select class="form-control custom-input" required>
                                         <option selected disabled>Select Payment Mode</option>
                                         <option value="cash">Cash</option>
                                         <option value="bank">Bank Transfer</option>
@@ -162,15 +164,19 @@
                                 <button type="button" class="btn btn-danger remove-btn" style="display:none;">✖</button>
                             </div>
                         </div>
-                    </div>
                 </div>
+
+                <!-- Submit Button -->
                 <div class="row mt-4 justify-content-center">
                     <div class="col-md-2 d-grid">
                         <button type="submit" class="btn btn-glow">Submit</button>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
+    </div>
+
 
     </div>
     <script src="../assets/script.js"></script>

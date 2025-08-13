@@ -620,3 +620,13 @@ table.dataTable thead th {
     padding: 12px 10px; /* More space inside header */
     cursor: pointer;    /* Pointer cursor for clickable sort */
 }
+
+
+@media print {
+    .page-title, header, .breadcrumb, .btn {
+        display: none !important;
+    }
+}
+
+
+
